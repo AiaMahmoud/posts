@@ -1,0 +1,32 @@
+<div class="modal-wrapper">
+
+  <div class="modal-content">
+    <div class="text-2xl text-center modal-body">
+      <div class="row pb-12" style=" margin-top: 10%;">
+        <div class="col-md-12">
+          <h1 *ngIf="!data.type" class="bold-label-header">{{data.action |translate}}</h1>
+          <div class="flex justify-content-center">
+            <img class="mr-2" width="80px" src=".././../../../../assets/images/dImg.PNG">
+          </div>
+          <span class="confirm-msg">{{'areyousure'|translate}} {{data.action |translate}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer" style="margin-top: 20%;">
+    <div class="modal-footer col-md-12">
+      <div class="col-md-5">
+        <button style="width: 100%;background-color: #F7F7F7;color: black;" class="block mb-2 btn btn-default"
+          (click)="closeModal()">{{'cancel'|translate}}
+        </button>
+      </div>
+      <div class="col-md-1"></div>
+
+      <div class="col-md-5">
+        <button style="width: 100%;background-color: #ff4949;color: #fff;" class="block mb-2 btn btn-primary"
+          type="submit" (click)="confirmed()">{{'delete' |translate}}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

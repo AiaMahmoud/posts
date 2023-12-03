@@ -1,0 +1,63 @@
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item page-items">
+      <a aria-label="Next">
+        <!-- <span aria-hidden="true" class="chang-page pointer" [class.dimmed]="pageNumber == 1 || arrayPagination.length == 1"
+        title="Previous"   (click)="previousPage()">&laquo; Prev</span> -->
+        <!-- <span aria-hidden="true" class="font-bold text-black">&laquo;</span> -->
+        <i *ngIf="languageService.langauge.value == 'en'"
+          [class.dimmed]="pageNumber == 1 || arrayPagination.length == 1" title="Previous" (click)="previousPage()"
+          class='font-bold text-black bx bx-chevron-left '></i>
+        <i *ngIf="languageService.langauge.value == 'ar'"
+          [class.dimmed]="pageNumber == 1 || arrayPagination.length == 1" title="Previous" (click)="previousPage()"
+          class='font-bold text-black bx bx-chevron-right'></i>
+      </a>
+    </li>
+    <!-- <li *ngFor="let i of arrayPagination " class="page-item">
+      <a class="page-link pointer" [class.active]="i == pageNumber" (click)="changeIndex(i)">{{i}}</a>
+    </li> -->
+
+
+    <ng-container *ngFor="let page of arrayPagination | slice:0:1;">
+      <li class="page-item page-items">
+        <a (click)="pageChanged(page)" class="pointer" [class.active]="page == pageNumber">{{page}}</a>
+      </li>
+    </ng-container>
+
+    <ng-container *ngFor="let page of arrayPagination | slice:start:end;">
+      <li class="page-item page-items">
+        <a (click)="pageChanged(
+          page)" class="pointer" [class.active]="page == pageNumber">{{page}}</a>
+      </li>
+    </ng-container>
+
+    <ng-container *ngIf="arrayPagination.length > end && curent != arrayPagination.length">
+      <ng-container *ngFor="let page of arrayPagination | slice:arrayPagination.length-1:arrayPagination.length;">
+        <li class="page-item page-items mt-1">
+          ...
+        </li>
+        <li class="page-item page-items">
+          <a (click)="pageChanged(page)" class="pointer" [class.active]="page == pageNumber">{{page}}</a>
+        </li>
+      </ng-container>
+    </ng-container>
+
+    <li class="page-item page-items">
+      <a aria-label="Previous">
+
+        <i *ngIf="languageService.langauge.value == 'ar'" (click)="nextPage()"
+          [class.dimmed]="pageNumber == arrayPagination.length || arrayPagination.length == 0" title="Next"
+          class='font-bold text-black bx bx-chevron-left '></i>
+        <i *ngIf="languageService.langauge.value == 'en'" (click)="nextPage()"
+          [class.dimmed]="pageNumber == arrayPagination.length || arrayPagination.length == 0" title="Next"
+          class='font-bold text-black bx bx-chevron-right '></i>
+        <!-- <span aria-hidden="true" class="chang-page pointer" (click)="nextPage()"
+        title="Next"
+          [class.dimmed]="pageNumber == arrayPagination.length || arrayPagination.length == 0"> Next&raquo;</span> -->
+      </a>
+    </li>
+    <li>
+      <div class="flex"><span></span></div>
+      </li>
+  </ul>
+</nav>

@@ -1,0 +1,50 @@
+<div class="card card-layout">
+  <div title="{{postData.title}}" class="card-header fixed-card-header ">
+
+    <div class="row">
+      <img class="row-img col-md-1 col-sm-1" src="../../../../../assets/images/post.png">
+      <div class="col-md-9 col-sm-9">
+
+        <p class="cart-icon-display">
+          <span>{{ postData.title | slice: 0:60 }}
+            <span *ngIf="postData.title.length >60"> .. </span> </span>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <p>
+        {{postData.body}}
+      </p>
+    </div>
+  </div>
+
+  <div class="card-body card-body-container">
+    <div class="table-container example-container">
+      <div *ngIf="!commentsList || !postData" class="item">
+        <ngx-skeleton-loader count="10"></ngx-skeleton-loader>
+      </div>
+      <div *ngIf="commentsList">
+        <div>
+          <table>
+            <tbody *ngFor="let comment of commentsList">
+              <tr>
+                <td><img style="width:20vh" src="../../../../assets/images/user-comment.png"></td>
+                <td>
+                  {{comment.name}}
+                  <span class="badge">{{comment.email}}</span>
+                </td>
+                <!-- <td></td> -->
+                <td>{{comment.body}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="row">
+      <ngb-rating class="ngb-rating" [max]="5" [(rate)]="starRating" [readonly]="false"></ngb-rating>
+    </div> -->
+
+  </div>
+
+</div>

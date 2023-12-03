@@ -1,0 +1,99 @@
+.table-sp {
+  font-size: 14px;
+  color: #707070 ;//#b9b8b8;
+  line-height: 10px;
+  text-align: center;
+  padding-bottom:1px !important
+}
+.t-header{
+  background-color: #ffffff !important;
+}
+.example-tab-icon {
+  margin-left: 8px;
+  font-size: 18px;
+ 
+}
+.side-icons{
+  color: #C19E10;
+}
+.table-hd {
+  word-wrap: break-word !important; 
+  background-color: #ffff;
+  text-align: center;
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 900;
+  color: #C19E10;
+}
+.table .body .tr{
+  display: table;
+  width: 100%;
+}
+
+.actionsRow{
+  text-align: unset !important;
+}
+.alert{
+padding: .3rem .3rem !important;
+}
+
+.fixed_header {
+  width: 1350px;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.fixed_header tbody {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  height: 400px;
+}
+.fixed_header thead tr {
+  display: block;
+}
+.fixed_header thead {
+  // background: black;
+  color: #fff;
+}
+.fixed_header th,
+.fixed_header td {
+  padding: 1px;
+  text-align: center;
+  width: 80px;
+}
+
+.fixed_header2 {
+  width: 1350px;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.fixed_header2 tbody {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  height: 400px;
+}
+.fixed_header2 thead tr {
+  display: block;
+}
+.fixed_header2 thead {
+  // background: black;
+  color: #fff;
+}
+
+.fixed_header2 th,
+.fixed_header2 td {
+  padding: 1px;
+  text-align: center;
+  width: 120px;
+}
+
+thead, tbody { display: block; }
+tbody {
+    height: 60%;       /* Just for the demo          */
+    overflow-y: auto;    /* Trigger vertical scroll    */
+    overflow-x: hidden;  /* Hide the horizontal scroll */
+}
+table, th, td {
+  border: 1px solid;
+}

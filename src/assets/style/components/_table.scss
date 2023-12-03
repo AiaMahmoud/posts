@@ -1,0 +1,238 @@
+
+.open{
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+
+}
+
+.filter {
+height: 0px;
+overflow: hidden;
+padding: 0px ;
+border: 0px !important;
+transition: all 0.5s ease;
+
+.input-group {
+    width: 200px;
+}
+.form-select {
+  border-radius: 50px !important;
+    display: block;
+    width: 210px;
+}
+.form-check .form-check-input {
+    float: right;
+    margin-left: 0.5em !important;
+    margin-top: 6px;
+}
+}
+.filter.open-filter {
+height: 600px;
+padding: 1rem !important;
+position: fixed; /* Safari */
+width: 350px;
+overflow:auto;
+background-color: white;
+  // position: sticky;
+  top: 0;
+//border-top: 1px solid rgba(209, 213, 219, 1)!important;
+}
+.side-open-filter {
+  margin-left: 350px;
+}
+
+.table > :not(:first-child){
+     border-top: 2px solid transparent !important;
+}
+.page-link {
+  font-size: 12px;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 33px;
+  padding: 0px;
+}
+.page-item:first-child .page-link,
+.page-item:last-child .page-link {
+  // border: 0;
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  // background-color: transparent !important;
+  // border-color: transparent !important;
+  font-size: 15px;
+  width: auto;
+  height: auto;
+}
+.page-item:first-child .page-link:hover,
+.page-item:last-child .page-link:hover {
+  // border: 0;
+  // color:red;
+  color: rgb(108, 97, 97);
+  border-radius: 5px;
+}
+.page-item .page-link {
+  margin-left: 4px !important;
+}
+
+.page-item .active {
+  position: relative;
+  border-radius: 5px;
+  display: block;
+  color: rgb(108, 97, 97);
+  font-weight: bold;
+  text-decoration: none;
+  // transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    // border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.page-link {
+  color: $color;
+  border: 0px solid $header-form;
+  border-radius: 50%;
+}
+
+.page-link:hover {
+  z-index: 2;
+  color: $color;
+  background-color: $background;
+  border-color: $background;
+  border-radius: 50%;
+}
+
+.pagination-list {
+  padding: 0.5rem;
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+  background-color: #fff;
+}
+
+.table {
+  border-radius: 12px 12px 0 0;
+}
+tbody:nth-child(odd) {
+  background-color: #ededed7e;
+}
+
+.table > :not(:last-child) > :last-child > * {
+  border-bottom: 0px;
+}
+
+
+td,
+th {
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.table thead tr {
+  border-radius: 5px;
+  background: #ededed7e;
+}
+.table > :not(:last-child) > :last-child > * {
+  border-bottom: 0px;
+}
+
+.table tr {
+  border-radius: 80px;
+
+}
+
+.table th,
+.table td {
+  padding: .8rem;
+}
+
+.table > :not(caption) > * > * {
+  border-bottom-width: 0px;
+}
+.head-tabel {
+  color: #b4b4b4;
+}
+.arrows {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.form-fixed-input{
+  background-color: #9dd5de !important;
+
+}
+
+.dimmed{
+  color: transparent !important;
+  border: 1px solid transparent !important;
+}
+
+.td-fixed{
+  height: 130px !important;
+  //border: 30px solid #ddf8fc !important;
+  border-top: 30px solid #ddf8fc !important ;
+  border-bottom: 30px solid #ddf8fc !important ;
+  border-left: 10px solid #ddf8fc !important ;
+  border-right: 10px solid #ddf8fc !important ;
+}
+
+.form-fixed {
+  // border: 0px !important;
+ // background-color: #ddf8fc !important;
+  transition: all 0.5s ease;
+
+  .input-group {
+      width: 200px;
+  }
+  .form-select {
+      display: block;
+      border-radius: 50px !important;
+      width: 210px;
+  }
+  .form-check .form-check-input {
+      float: right;
+      margin-left: 0.5em !important;
+      margin-top: 6px;
+  }
+}
+
+.head_info-profile{
+  color: $active-blue !important;
+}
+.card_items-pro{
+  color : $icon_text !important;
+}
+.img-di{
+  background-color: $card-bod !important;
+  font-size: smaller;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  text-align: -webkit-center;
+  padding: inherit;
+  margin: auto;
+}
+.div-tex{
+  text-align: center;
+  text-align: -webkit-center;
+}
+.card-pr{
+ background-color: $card-pr !important;
+}
+.edit, .details {
+  font-size: 20px;
+  color:#707070;
+}
+.card-active{
+ background-color: $primary-bg !important;
+ border: 2px solid $active-blue !important;
+}
+
+@media (max-width: 1000px) {
+  .table {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+}
+

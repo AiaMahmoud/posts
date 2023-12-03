@@ -1,0 +1,29 @@
+<div class="navbar flex flex-nowrap ">
+  <div style="justify-content: flex-start;">
+  </div>
+  <div>
+    <span class="navH col-md-7"> {{'MENU.welcomeUser'|translate}} {{userData | uppercase}} </span>
+  </div>
+  <div style="width: 10vw; display:inline">
+    <div class="row">
+      <div ngbDropdown class="col-md-5">
+        <i class='css-1dyoea edit pointer' id="dropdownBasic1" ngbDropdownToggle>
+          <img class="pointer" src="../../../assets/images/main/avatar.png">
+        </i>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="menue-open">
+          <div title="{{'MENU.ChangeLAnguage'|translate}}" class=" flex justify-center items-center  nav-link  pointer"
+            aria-current="page" (click)="changeLanguage()">
+            {{'language'| translate}}
+          </div>
+          <button ngbDropdownItem class="sm:text-sm profilebtns" (click)="userLogOut()">
+            <li style="color:#37A825" class="bx bx-log-out"></li> {{'MENU.logOut'| translate}}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>

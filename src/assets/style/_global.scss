@@ -1,0 +1,252 @@
+@import "colors";
+@import "scroll_bar";
+@import "form";
+@import "./components/navbar";
+@import "./components/sidebar";
+@import "./components/home";
+@import "./components/table";
+@import "./components/loader";
+@import '~material-design-icons/iconfont/material-icons.css';
+
+
+/**
+  font-family: Montserrat;
+  src: url("../fonts/Tajawal-Regular.ttf");
+  src: local('Material Icons'),
+        local('MaterialIcons-Regular'),
+        url(iconfont/MaterialIcons-Regular.ttf) format('woff2'),
+        url(iconfont/MaterialIcons-Regular.ttf) format('woff'),
+        url(iconfont/MaterialIcons-Regular.ttf) format('truetype');
+}
+**/
+
+@font-face {
+  font-family: Montserrat;
+  src: url("../fonts/Tajawal-Regular.ttf");
+  
+}
+textarea {
+  resize: none;
+  }
+body {
+  font-family: Montserrat;
+  background: $background;
+  color: $color;
+}
+.login-body {
+  background: #128300 !important;
+}
+span {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17.63px;
+  color: $dark-space-grey;
+}
+.ng-value-label{
+  background-color:  #d9d9d9;
+  color: #128300 !important;;
+}
+.ng-value-icon{
+  background-color:  #d9d9d9;
+  color: red !important;
+}
+p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26.46px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 500;
+  // line-height: 45.57px;
+}
+
+h3 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17.63px;
+}
+
+.p-4 {
+  padding: 1.3rem !important;
+}
+.pl-4 {
+  padding-left: 1.3rem;
+}
+.pr-4 {
+  padding-right: 1.3rem;
+}
+.pt-4 {
+  padding-top: 1.3rem;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+// .card {
+//   padding: 16px;
+//   border-radius: 5px;
+//   border: 0px;
+//   box-shadow: $shadow !important;
+// }
+.mat-ink-bar{
+  background-color: #37A825 !important;
+
+}
+.mat-ripple{
+  width: 50% !important;
+}
+.card-btn {
+  padding: 16px;
+  border-radius: 5px;
+  border: 0px;
+  box-shadow: $shadow !important;
+}
+
+.modal-footer {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+//backeup newtwork
+.flex {
+  display: flex !important;
+}
+.justify-between {
+  justify-content: space-between !important;
+}
+.justify-end {
+  justify-content: end !important;
+}
+.items-center {
+  align-items: center !important;
+}
+.justify-center {
+  justify-content: center !important;
+}
+.w-full {
+  align-items: center;
+  width: 75% !important;
+}
+.py-4 {
+  padding-top:  16px ;
+  padding-bottom:  16px ;
+}
+.block {
+  display: block;
+}
+.-mt-2 {
+  margin-top: -0.5rem /* -8px */;
+}
+.h-full {
+  height: 100%;
+}
+.mr-2 {
+  margin-right: 0.5rem /* 8px */;
+}
+.mb-6 {
+  margin-bottom: 1.5rem /* 24px */;
+}
+.text-2xl {
+  font-size: 1.5rem /* 24px */;
+  line-height: 2rem /* 32px */;
+}
+.text-3xl {
+  font-size: 1.875rem /* 30px */;
+  line-height: 2.25rem /* 36px */;
+}
+.text-4xl {
+  font-size: 2.25rem /* 36px */;
+  line-height: 2.5rem /* 40px */;
+}
+.relative {
+  position: relative !important;
+  margin-top: 70px;
+}
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+.flex-col {
+  flex-direction: column;
+}
+.grid {
+  display: grid;
+  margin-top: 100px;
+}
+
+.py-4 {
+  padding-top: 16px ;
+  padding-bottom: 16px ;
+}
+.mb-20 {
+  margin-bottom: 5rem /* 80px */;
+}
+.text-2xl {
+  font-size: 1.5rem /* 24px */;
+  line-height: 2rem /* 32px */;
+}
+.my-2 {
+  margin-top: 0.5rem /* 8px */;
+  margin-bottom: 0.5rem /* 8px */;
+}
+.mt-16 {
+  margin-top: 4rem /* 64px */;
+}
+.ml-2 {
+  margin-left: 0.5rem !important;
+}
+.mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+.bold-label{
+  font-weight: bolder;
+  color: #ffff !important;
+}
+.sr-only{
+  // color: red;
+}
+.ngb-rating span{
+color: #ffd700;
+}
+.mb-3 {
+  margin-bottom: 0.75rem !important;
+}
+.pl-4 {
+  padding-left: 1rem !important;
+}
+.pr-4 {
+  padding-right: 1rem !important;
+}
+.pt-4 {
+  padding-top: 1rem;
+}
+//
+
+.cdk-global-overlay-wrapper {
+  display: flex !important;
+  justify-content: end !important;
+}
+.cdk-overlay-pane {
+  // height: 90% !important;
+  box-shadow: 10px 10px 10px 10px rgba(10, 10, 10, 0.1);
+}
+.backdropBackground{
+  background-color: #bbbbbbf2;
+  backdrop-filter: blur(4px);
+}
+.cdk-overlay-dark-backdrop {
+  background-color: transparent !important;
+}
+
+.ngb-tp .ngb-tp-input-container{
+  padding-left: 60px !important;
+  padding-right: 60px !important;
+}
+.modalTitle{
+  color:#37A825;
+  text-align: center;
+  font-weight: bolder;
+}

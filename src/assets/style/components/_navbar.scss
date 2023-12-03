@@ -1,0 +1,46 @@
+@import "../colors";
+
+@mixin biDirectional($start, $end) {
+  .up-x {
+    width: 310px;
+    height: 100px;
+  }
+
+  .dowen-x {
+    width: 10px;
+  }
+  .navbar {
+    position: fixed;
+    #{$start}: 0;
+    top: 0;
+    // height:6%;
+    width: 101%;
+    background: #df1a33;
+    // background-image: linear-gradient(to right, #fff , #df1a33);
+    padding: 6px 14px;
+    padding-#{$start}: 17px;
+    // margin-top: 60px;
+    z-index: 99;
+    transition: all 0.5s ease;
+    box-shadow: $shadow;
+    height: 11%;
+    display: inline-block; 
+  }
+
+  .up-x .active {
+    background: $blue-dark;
+  }
+
+  .active-X {
+    background: $blue-dark;
+  }
+
+  .dowen-x img {
+    width: 55px;
+    height: 55px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+}
+
+@import "../direction";

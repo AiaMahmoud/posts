@@ -1,0 +1,58 @@
+<table class="table">
+  <thead class="t-header">
+    <!-- <tr style="line-height: 5px;padding: 2px;margin-bottom: 10px;"> -->
+      <th scope="col" *ngFor="let item of displayColums">
+        <div>
+          <div style="word-wrap: break-word">{{item |translate}}</div>
+        </div>
+      </th>
+      <th scope="col">
+        {{'actions'|
+        translate}}
+      </th>
+    <!-- </tr> -->
+  </thead>
+  <tbody >
+    <ng-container *ngFor="let dataItem of dataList ;let i=index;">
+      <tr *ngIf="dataItem.displayStyle">
+        <td scope="col" *ngFor='let d of displayColums'>
+          <div *ngIf="d !='image' && d!='category'" title="{{dataItem[d]}}"> {{ dataItem[d]}} </div>
+          <div *ngIf="d =='category'"><span> {{ dataItem[d]}}  </span> </div>
+          <div *ngIf="d =='image'" title="{{dataItem[d]}}"> <img style="border-radius: 50%;width: 10vw;border-color: grey; border: 2px;" [src]="dataItem[d]"></div>
+          <div *ngIf="d == 'createdDate'">
+            {{dataItem[d]}}
+          </div>
+        </td>
+        <td scope="col">
+          <ng-container>
+            <i (click)="openSimpleModeEdite(dataItem.id,i,dataItem)" title="تعديل"> <mat-icon
+                class="edit pointer mx-2 example-tab-icon">edit</mat-icon> </i>
+            <i class='' (click)="closeSimpleModeDelete(dataItem,i)" title="مسح">
+              <mat-icon class="edit pointer mx-2 example-tab-icon">delete_outline</mat-icon>
+            </i>
+          </ng-container>
+        </td>
+      </tr>
+      <tr *ngIf="!dataItem.displayStyle && oneEditModeOpen" scope="col">
+        <td class="form-fixed-input">
+          <input type="text" class="form-control" placeholder="Name">
+        </td>
+        <td class="form-fixed-input"><input type="email" class="form-control" placeholder="Email"></td>
+        <td class="form-fixed-input"><input type="tel" class="form-control" placeholder="Phone"></td>
+        <td class="form-fixed-input"><input type="text" class="form-control" placeholder="Title"></td>
+        <td class="form-fixed-input  items-center justify-center ">
+          <div ngbDropdown>
+            <i class='bx bx-dots-vertical-rounded pointer' id="dropdownBasic1" ngbDropdownToggle></i>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="menue-open">
+              <button ngbDropdownItem class="sm:text-sm" (click)="closeSimpleMode(dataItem.id,i)"> <i
+                  class='bx bx-trash'></i> {{'Cansel'| translate}}</button>
+              <button ngbDropdownItem class="sm:text-sm" (click)="closeSimpleModeSave(dataItem.id,i)"> <i
+                  class='bx bx-edit'></i> {{'Save'| translate}}</button>
+            </div>
+          </div>
+        </td>
+        <td class="form-fixed-input"></td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>

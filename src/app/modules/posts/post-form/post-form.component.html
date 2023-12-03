@@ -1,0 +1,26 @@
+<div class="modal-wrapper">
+  <div class="justify-between ">
+    <h2 class="mb-2 head-tabel modalTitle">{{actionName | translate}} {{'post'|translate}}</h2>
+  </div>
+  <div class="modal-content">
+    <ngx-skeleton-loader *ngIf="loading" count="15"></ngx-skeleton-loader>
+    <div *ngIf="!loading" class="modal-body row">
+      <div *ngIf="fields.length != 0">
+        <form [formGroup]="form" (ngSubmit)="onSubmit(model)">
+          <formly-form [form]="form" [fields]="fields" [model]="model" class="flex flex-wrap "></formly-form>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer" style="margin-top: 3%;">
+    <div *ngIf="fields.length != 0" class="modal-footer">
+      <button class="block w-100 mb-2 btn btn-primary" [disabled]="form.invalid || disabelSubmit" type="submit"
+        (click)="onSubmit(model)">{{actionName}}
+      </button>
+      <div *ngIf="disabelSubmit == true">
+        <div class="circle"></div>
+      </div>
+    </div>
+
+  </div>
+</div>

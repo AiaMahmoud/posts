@@ -1,0 +1,218 @@
+.dropdown-toggle::after {
+  display: none !important;
+}
+.example-container {
+  height: 65vh;
+  overflow: auto;
+}
+.fixed-table-header {
+  padding: 1%;
+  position: fixed;
+  width: 90%;
+  // background-color: #fff;
+  .header-section {
+    width: 30%;
+    .bold-label {
+      color: #37a825 !important;
+    }
+    .search-input {
+      line-height: 2.5;
+    }
+  }
+}
+.badge {
+  background-color: #9d9f9c;
+}
+.price-badge {
+  background-color: rgb(247, 222, 205);
+  color: #575757;
+  font-size: medium;
+}
+
+table {
+  width: 100%;
+}
+
+.selected-star {
+  color: #ffd700;
+}
+
+.tableHeader {
+  text-align: center;
+}
+.row-img {
+  border-color: #666;
+  border: 2px;
+  width: 15vh;
+  padding: 10px;
+  cursor: pointer;
+}
+.textSpan {
+  border-radius: 50%;
+  color: #ffffff;
+  text-align: center;
+  align-items: center;
+  margin-left: 7px;
+}
+.example-tab-icon {
+  color: #adaaaa;
+  margin-left: 8px;
+}
+.example-tab-icon :active {
+  color: #37a825 !important;
+}
+.textSpan:hover {
+  font-weight: bolder;
+}
+.textSpan:active {
+  color: red;
+}
+.cbkgAF {
+  border: 0px;
+  margin-left: 12px;
+}
+.jHIhlM:first-child {
+  margin-left: 0px;
+}
+.jHIhlM {
+  background: transparent;
+  padding: 0px;
+  // margin-left: -10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  z-index: 7;
+  transition: transform 0.1s ease-out 0s;
+}
+.kTtnQB {
+  border: 0px;
+  height: 100%;
+  overflow: hidden;
+  padding: 0px;
+  position: absolute;
+  width: 100%;
+  white-space: nowrap;
+  opacity: 0;
+  cursor: pointer;
+}
+input[type="checkbox" i] {
+  background-color: initial;
+  cursor: default;
+  appearance: auto;
+  box-sizing: border-box;
+  margin: 3px 3px 3px 4px;
+  padding: initial;
+  border: initial;
+}
+input {
+  writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: fieldtext;
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  appearance: auto;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  background-color: field;
+  margin: 0em;
+  padding: 1px 2px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
+}
+.hsvmCs {
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+.fhtMkh {
+  line-height: 0;
+  display: block;
+  cursor: pointer;
+}
+.css-ob4lje {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex: 1 1 100%;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.css-1dyoea {
+  height: 32px;
+  width: 32px;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+  background-color: var(--ds-surface-overlay, #ffffff);
+  border-radius: 50%;
+  box-sizing: content-box;
+  cursor: inherit;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  outline: none;
+  overflow: hidden;
+  position: static;
+  transform: translateZ(0px);
+  transition: transform 200ms ease 0s, opacity 200ms ease 0s;
+  box-shadow: 0 0 0 2px var(--ds-surface-overlay, #ffffff);
+  border: none;
+  margin: 2px;
+  padding: 0px;
+  font-size: inherit;
+  font-family: inherit;
+}
+.class1 {
+  background-color: aqua;
+}
+.backdropBackground {
+  background-color: #bbbbbbf2;
+  backdrop-filter: blur(4px);
+}
+.css-1dyoea:active {
+  // width: 35px;
+  // height: 35px;
+  border-radius: 0%;
+}
+.iNYZoJ {
+  position: relative;
+}
+#ghx-quick-filters > ul > .iNYZoJ {
+  padding: 0px;
+  margin: 0px 12px 0px 0px;
+}
+#ghx-quick-filters > .knMThH.knMThH {
+  display: flex;
+}
+#ghx-quick-filters > ul {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#ghx-quick-filters {
+  margin-bottom: 16px;
+}
+.grey-text {
+  // background-color: #37a825;
+  color: #adaaaa;
+  border-radius: 20%;
+  padding: 7px;
+  font-weight: 400;
+}
+// ::ng-deep.mat-tab-label.mat-tab-label-active:not(.mat-tab-disabled),
+// ::ng-deep.mat-tab-label.mat-tab-label-active.cdk-keyboard-focused:not(.mat-tab-disabled) {
+//   // background-color: #FCE500;
+//   font-weight: 700;
+//   color: #37A825;
+//   opacity: 1;
+// }

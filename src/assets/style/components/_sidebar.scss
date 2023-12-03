@@ -1,0 +1,285 @@
+@import "../colors";
+@mixin biDirectional($start, $end) {
+  .side-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 5px;
+  }
+  .sidebar {
+    position: fixed;
+    #{$start}: 78px;
+    top: 0;
+    height: 100%;
+    width: 25px;
+    background: $primary-bg;
+    padding: 6px 14px;
+    padding-#{$start}: 17px;
+    // margin-top: 60px;
+    z-index: 99;
+    transition: all 0.5s ease;
+    box-shadow: $shadow;
+  }
+  .sidebar.open {
+    width: 250px;
+  }
+  .sidebar .side-info {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-#{$end}: 2px;
+  }
+  .sidebar .side-info .icon {
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  .sidebar .side-info .logo_name {
+    color: $color;
+    font-size: 25px;
+    font-weight: 600;
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  .sidebar.open .side-info .icon,
+  .sidebar.open .side-info .logo_name {
+    opacity: 1;
+  }
+  .sidebar .side-info #btn {
+    position: absolute;
+    top: 50%;
+    #{$end}: 0;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: all 0.4s ease;
+    font-size: 23px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  .sidebar.open .side-info #btn {
+    text-align: #{$end};
+  }
+  .sidebar i {
+    color: $primary-bg;
+    height: 45px;
+    min-width: 45px;
+    font-size: 28px;
+    text-align: center;
+    line-height: 45px;
+  }
+  .sidebar .nav-list {
+    margin-top: 45px;
+    height: 84vh !important;
+     overflow-y: scroll !important;
+    overflow-x: hidden;
+  }
+  .sidebar li {
+    position: relative;
+    margin: 8px 0;
+    list-style: none;
+    border-radius: 5px;
+    border: 0px solid $side-g;
+    height: 45px;
+    overflow: hidden;
+    transition: width 0.4s ease;
+  }
+  .sidebar li a {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .sidebar li a:hover {
+    background: $side-g;
+    color: #fff;
+  }
+  .sidebar li a .links_name {
+    font-weight: bold !important;
+    color: $primary-bg;
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s ease;
+  }
+
+  .sidebar.open .active .link {
+    i,
+    span {
+      color: $bolits-sid !important;
+    }
+  }
+  .sidebar.open .active2 {
+    i,
+    span {
+      color: $bolits-sid !important;
+    }
+  }
+
+  .sidebar.open li a .links_name {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .sidebar li a:hover .links_name,
+  .sidebar li a:hover i {
+    transition: all 0.5s ease;
+    color: $primary-bg;
+  }
+  .sidebar li i {
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  .main-section {
+    position: relative;
+    margin-top: 7%;
+    min-height: 80%;
+    padding: 1rem;
+    //padding-top: calc(60px + 1rem);
+    #{$start}: 60px;
+    width: calc(100% - 120px);
+    transition: all 0.5s ease;
+    z-index: 2;
+  }
+  // .sidebar.open ~ .main-section {
+  //   #{$start}: 340px;
+  //   width: calc(100% - 340px);
+  // }
+  // .main-section .text {
+  //   display: inline-block;
+  //   color: $blue;
+  //   font-size: 25px;
+  //   font-weight: 500;
+  //   margin: 18px;
+  // }
+  .item a {
+    border-radius: 0px !important;
+    padding: 5px 15px;
+  }
+  .item a::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    -moz-border-radius: 7.5px;
+    -webkit-border-radius: 7.5px;
+    border-radius: 7.5px;
+    background-color: #b4b4b4;
+  }
+
+  .sidebar.open .active2 a::before {
+    background-color: $bolits-sid !important;
+  }
+
+  .item li {
+    margin: 4px 8px;
+  }
+  .sidebar.close li {
+    height: 45px;
+    padding-bottom: 0px;
+  }
+  .sidebar .active {
+    color: $bolits-sid !important;
+  }
+  .sidebar.close .active .link {
+    background-color: $bolits-sid !important;
+  }
+  .sidebar .show {
+    height: auto;
+    border: 0px;
+    background: transparent;
+    padding-bottom: 7px;
+  }
+  .link {
+    border: 0px;
+    background: $side-g;
+    color: $color;
+  }
+  .sidebar.open .active .link {
+    color: $bolits-sid;
+  }
+  .sidebar .active2 {
+    color: $bolits-sid !important;
+    border-radius: 5px;
+  }
+
+  .sidebar span {
+    margin-#{$end}: auto;
+  }
+  .arrow-close {
+    margin: 0px !important;
+  }
+  .arrow-open {
+    margin: 0px !important;
+    display: none;
+  }
+  .show .arrow-close {
+    display: none;
+  }
+  .show .arrow-open {
+    display: block;
+  }
+  @media (max-width: 1000px) {
+    .sidebar.open ~ .main-section {
+      #{$start}: 150px;
+      width: calc(100% - 150px);
+    }
+  }
+
+  .arro-side {
+    width: 30px;
+    height: 30px;
+    background-color: $blue-dark;
+    border-radius: 50%;
+    position: absolute;
+    top: 15%;
+    #{$start}: 85%;
+    transform: translateY(4%);
+    display: flex;
+    z-index: 999999999;
+    outline: 6px solid $background;
+
+    i {
+      display: flex;
+      margin-top: -5px;
+      margin-bottom: -5px;
+    }
+  }
+
+  .arro-side-close {
+    width: 30px;
+    height: 30px;
+    background-color: $blue-dark;
+    border-radius: 50%;
+    position: absolute;
+    top: 15%;
+    #{$start}: 100%;
+    transform: translateY(4%);
+    display: flex;
+    z-index: 999999999;
+    outline: 6px solid $background;
+
+    i {
+      display: flex;
+      margin-top: -5px;
+      margin-bottom: -5px;
+    }
+  }
+
+  .icon-gray {
+    color: #0d0d0d !important;
+  }
+
+  .icon-green {
+    color: #37A825 !important;
+  }
+}
+
+@import "../direction";

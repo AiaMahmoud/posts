@@ -1,0 +1,22 @@
+<div class="modal-wrapper">
+  <i class='bx bx-x pointer text-2xl modal-head' (click)="closeModal()"></i>
+  <div class="modal-body text-center text-2xl">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="flex justify-content-center ">
+          <img class="mr-2 text-center" width="80px" src="../../../assets/images/warning-error-svgrepo-com.svg">
+
+        </div>
+        <h1 class="text-center">{{ message }}</h1>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="mb-2 btn btn-danger" (click)="onSubmit()">
+      Yes
+    </button>
+    <button class="btn btn-default mb-2" (click)="closeModal()">
+      No
+    </button>
+  </div>
+</div>

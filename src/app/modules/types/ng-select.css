@@ -1,0 +1,22 @@
+ng-select {
+    border: 1px solid;
+    width: 200px;
+    margin-bottom: 50px;
+}
+
+.ng-value {
+    margin-top: 100px;
+}
+
+span {
+    margin-top: 100px;
+}
+
+div {
+    margin-top: 50px;
+}
+
+input {
+    width: 100px;
+    border: 1px solid;
+}

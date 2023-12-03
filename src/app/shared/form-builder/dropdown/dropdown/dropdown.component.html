@@ -1,0 +1,21 @@
+<mat-form-field [appearance]="'outline'" class="w-100">
+  <mat-label>{{label | translate}} <span *ngIf="isRequiredLabel" class="required"> *</span></mat-label>
+  <ng-select   (selectionChange)="selectionChanged($event)" [disabled]="disabled" [placeholder]="placeholder" [value]="Value" [formControl]="selectListControl" [multiple]="multiple" [value]="selectedValue">
+    <ng-option *ngFor="let option of options" [value]="option.id">{{car.text}}</ng-option>
+ </ng-select>
+  <!-- <mat-select  (selectionChange)="selectionChanged($event)" [disabled]="disabled" [placeholder]="placeholder"
+    [value]="Value" [formControl]="selectListControl" [multiple]="multiple" [value]="selectedValue">
+    <mat-option *ngIf="!isRequiredLabel">{{'None' }}</mat-option>
+    <mat-option *ngFor="let option of options" [value]="option.id">
+      {{option.text |translate}}
+    </mat-option>
+  </mat-select> -->
+</mat-form-field>
+
+
+<!-- <div class="mb-3 -mt-2">
+  <label class="mb-2">{{label}}</label>
+  <ng-select class="select" [items]="options" bindLabel="text" bindValue="id"
+   (selectionChange)="selectionChanged($event)" [disabled]="disabled" [placeholder]="placeholder" [multiple]="false">
+  </ng-select>
+</div> -->

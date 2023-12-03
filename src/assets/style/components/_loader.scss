@@ -1,0 +1,102 @@
+@-webkit-keyframes fed {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-500%);
+            transform: translateX(-500%); }
+  30%,
+  70% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  50% {
+    -webkit-transform: translateX(0) scale(2.5);
+            transform: translateX(0) scale(2.5); }
+  40%,
+  60% {
+    -webkit-transform: translateX(0) scale(1.5);
+            transform: translateX(0) scale(1.5); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(500%);
+            transform: translateX(500%); } }
+@keyframes fed {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-500%);
+            transform: translateX(-500%); }
+  30%,
+  70% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  50% {
+    -webkit-transform: translateX(0) scale(2.5);
+            transform: translateX(0) scale(2.5); }
+  40%,
+  60% {
+    -webkit-transform: translateX(0) scale(1.5);
+            transform: translateX(0) scale(1.5); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(500%);
+            transform: translateX(500%); } }
+
+@-webkit-keyframes feed {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-500%);
+            transform: translateX(-500%); }
+  40% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(500%);
+            transform: translateX(500%); } }
+
+@keyframes feed {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-500%);
+            transform: translateX(-500%); }
+  40% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(500%);
+            transform: translateX(500%); } }
+
+.feeder {
+  height: 100%;
+  min-height: 50rem;
+  position: relative;
+  width: 100%; }
+  .feeder div {
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-name: fed;
+            animation-name: fed;
+    -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;
+    -webkit-animation-delay: calc(var(--delay) * 1s);
+            animation-delay: calc(var(--delay) * 1s);
+            background-color: #486573;
+    border-radius: 50%;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%,-50%);
+    width: 50px; }
+    .feeder div:nth-child(2), .feeder div:nth-child(3) {
+      -webkit-animation-name: feed;
+              animation-name: feed; }
+    .feeder div:nth-child(2) {
+      --delay: .25; }
+    .feeder div:nth-child(3) {
+      --delay: .5; }

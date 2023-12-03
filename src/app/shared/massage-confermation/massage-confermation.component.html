@@ -1,0 +1,22 @@
+<div class="modal-wrapper">
+  <i class='text-2xl bx bx-x pointer modal-head' (click)="closeModal()"></i>
+  <div class="text-2xl text-center modal-body">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="flex justify-content-center ">
+          <img class="mr-2 text-center" width="80px" src=".././../../../../assets/images/warning-error-svgrepo-com.svg">
+
+        </div>
+        <h1 class="text-center">{{ message }}</h1>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button *ngIf="type != 'file'" class="mb-2 btn btn-danger" (click)="onSubmit()">
+        Confermed
+    </button>
+    <button class="mb-2 btn btn-default" (click)="closeModal()">
+      close
+    </button>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+::ng-deep body {
+    &[dir="ltr"] {
+        @include biDirectional(left, right);
+    }
+
+    &[dir="rtl"] {
+        @include biDirectional(right, left);
+    }
+}
+
+body {
+    &[dir="ltr"] {
+        @include biDirectional(left, right);
+        .modal-body {
+            direction: ltr;
+            
+        }
+    }
+
+    &[dir="rtl"] {
+        @include biDirectional(right, left);
+        .modal-body {
+            direction: rtl;
+            
+        }
+    }
+}

@@ -1,0 +1,71 @@
+<div class="flex justify-end items-center bg-transparent absolute div-lang">
+
+</div>
+
+<div class=" auth w-full-100  ">
+  <div class="logo-div">
+    <div class="text-center">
+      <a class="navbar-brand m-0">
+        <img class="side-img" width="100vw" src="../../../../../assets/images/post.png" />
+      </a>
+    </div>
+  </div>
+  <div class=" form-div">
+    <ng-container>
+      <div ngbDropdown>
+        <i class='bx bx-world edit pointer' id="dropdownBasic1" ngbDropdownToggle></i>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="menue-open">
+          <button ngbDropdownItem class="sm:text-sm" (click)="changeLanguage()"> {{'language'| translate}}</button>
+        </div>
+      </div>
+    </ng-container>
+    <div class="text-center">
+      <div class="form-login">
+        <div class=" flex items-center justify-center w-full-100 ">
+          <div class="">
+            <div class=" mt-8 ">
+              <div class="info-data">
+                <p> {{'Welcome'| translate}}</p>
+              </div>
+            </div>
+            <form [formGroup]="FormLogin" (ngSubmit)="onSubmit()">
+              <div class="row">
+                <div class="col-md-12 " style="text-align: initial;">
+                  <div class="form-group mb-6 ">
+                    <label class="mb-2 bold-label">
+                      {{'AUTH.username'| translate}}</label>
+                    <div class="input-group">
+                      <input class="form-control force-ltr" autocomplete="off"
+                        placeholder="{{'AUTH.Enterusername'| translate}}" type="text" formControlName="userName"
+                        aria-describedby="basic-addon1" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12" style="text-align: initial;">
+                  <div class="form-group mb-6 ">
+                    <label class="mb-2 bold-label">
+                      {{'AUTH.password'| translate}}
+                    </label>
+                    <div class="input-group">
+                      <input class="form-control" [type]="'password'" placeholder="{{'AUTH.EnterPassword'| translate}}"
+                        formControlName="password" autocomplete="off" name="password" required
+                        aria-describedby="basic-addon1" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12  my-4">
+                  <div class="form-group mb-6 ">
+                    <button [disabled]="loading" type="submit"
+                      class="btn btn btn-primary btn-block text-center w-full ">
+                      {{'AUTH.login'| translate}}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

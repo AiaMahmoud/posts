@@ -1,0 +1,28 @@
+
+  @mixin mobileScroling {
+    @media screen and  (min-device-height: 320px) 
+    and (max-device-height: 480px)
+    and (orientation: landscape) {
+      @content;
+    }
+  }
+
+  @mixin maxMobile {
+    @media screen and (max-width: 735px) {
+      @content;
+    }
+  }
+  
+  @mixin maxSmall {
+    @media screen and (max-width: 991px) {
+      @content;
+    }
+  }
+
+
+
+$maxMobile: "(max-width: 735px)";
+$maxSmall: "(max-width: 991px)";
+
+$minMedium: "(min-width: 992px)";
+$minLarge: "(min-width: 1200px)";

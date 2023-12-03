@@ -1,0 +1,11 @@
+<mat-form-field [appearance]="'outline'" class="w-100">
+  <mat-label>{{label | translate}} <span *ngIf="isRequiredLabel" class="required"> *</span></mat-label>
+
+  <mat-select (selectionChange)="selectionChanged($event)" [disabled]="disabled" [placeholder]="placeholder"
+    [value]="Value" [formControl]="selectListControl" [multiple]="multiple">
+    <mat-option *ngIf="!isRequiredLabel">{{'None' }}</mat-option>
+    <mat-option *ngFor="let option of options" [value]="option.id">
+      {{option.text}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

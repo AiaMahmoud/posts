@@ -1,0 +1,17 @@
+<mat-form-field class="w-100" [appearance]="'outline'" [class.summary]="summary" #formField="matFormField">
+<mat-label>{{label | translate }} <span *ngIf="isRequiredLabel" class="required"> *</span></mat-label>
+  <input matInput maxlength="maxL" pattern="pattern" (change)="inputValueChange($event)" [value]="Value"  [placeholder]="placeholder | translate"
+    [disabled]="disabled">
+</mat-form-field>
+<!-- <label class="mb-2">
+  {{label}}</label>
+<input type="text" class="form-control" id="floatingInput01" autocomplete="off" (change)="inputValueChange($event)"
+  [value]="Value" [placeholder]="placeholder | translate" [disabled]="disabled"> -->
+
+
+
+<!-- <div class="form-floating mb-3 ">
+              <input type="text" class="form-control" formControlName="nameAr" id="floatingInput01"
+                placeholder="Group Name" autocomplete="off">
+              <label for="floatingInput01">Organization Name Ar</label>
+ </div> -->

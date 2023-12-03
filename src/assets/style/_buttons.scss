@@ -1,0 +1,83 @@
+@import "mixins";
+.m-btn {
+  font-size: $fontSize;
+  color: $primary-bg;
+  line-height: $line-height;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn:disabled {
+  @include boxshadow(0 0 6px rgba(122, 137, 147, 0));
+  outline: 0 !important;
+  cursor: not-allowed !important;
+  opacity: 0.5 !important;
+  background-color: $space-blue !important;
+  border: 1px solid $space-blue;
+}
+
+.m-btn:hover {
+  @include boxshadow(0 8px 18px 0 rgba(122, 137, 147, 0.3));
+}
+
+.m-btn:focus {
+  @include boxshadow(0 0 6px rgba(122, 137, 147, 0.3));
+  outline: 0;
+  background-color: $space-blue;
+}
+
+.m-btn:disabled {
+  @include boxshadow(0 0 6px rgba(122, 137, 147, 0));
+  outline: 0;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.btn-dark:disabled {
+  @include boxshadow(0 0 6px rgba(122, 137, 147, 0));
+  outline: 0;
+  cursor: not-allowed;
+  opacity: 0.5;
+  background-color: black !important;
+}
+
+.btn-primary {
+  background-color:#df1a33;
+  &:hover {
+    background-color: $space-blue;
+  }
+}
+.btn-success{
+  background-color:  #d9d9d9;
+  color: #47992e !important;
+  &:hover {
+    background-color: #d9d9d9;
+    color: #47992e !important;
+  }
+}
+.btn-danger {
+  background-color: #ffff;
+  &:hover {
+    background-color: #ffff;
+  }
+}
+
+.btn-large {
+  @extend .m-btn;
+}
+
+.btn-medium {
+  @extend .m-btn;
+}
+
+.btn-small {
+  @extend .m-btn;
+}
+
+.btn-circle {
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+}

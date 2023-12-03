@@ -1,0 +1,221 @@
+@mixin biDirectional($start, $end) {
+  .dropdown-toggle::after {
+    display: none !important;
+  }
+
+  .dropdown-menu-XL {
+    z-index: 999999 !important;
+    position: absolute !important;
+    #{$start}: 125% !important;
+    top: 20% !important;
+    transform: translateY(10px) !important;
+    width: 30rem !important;
+    max-height: 24rem;
+    overflow-y: scroll;
+  }
+  .dropdown-item-XL {
+    height: 85px !important;
+    background: #ededed7e 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    opacity: 1;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+
+
+}
+.rotate-9p {
+  transform: rotate(-90deg);
+}
+
+.over_hand-card {
+  padding: 22px;
+  border-radius: 5px;
+  border: 0px;
+  box-shadow: none !important;
+}
+.assignMessage {
+  margin-top: 10px;
+}
+.dropdown-toggle::after {
+  display: none !important;
+}
+.textSpan {
+  font-size: 18px;
+  border-radius: 50%;
+  color: #ffffff;
+  text-align: center;
+  align-items: center;
+  margin-left: 7px;
+}
+.profilebtns {
+  text-align: right;
+}
+.textSpan:hover {
+  font-weight: bolder;
+}
+.textSpan:active {
+  color: red;
+}
+.cbkgAF {
+  border: 0px;
+  margin-left: 12px;
+}
+.jHIhlM:first-child {
+  margin-left: 0px;
+}
+.jHIhlM {
+  background: transparent;
+  padding: 0px;
+  // margin-left: -10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  z-index: 7;
+  transition: transform 0.1s ease-out 0s;
+}
+.kTtnQB {
+  border: 0px;
+  height: 100%;
+  overflow: hidden;
+  padding: 0px;
+  position: absolute;
+  width: 100%;
+  white-space: nowrap;
+  opacity: 0;
+  cursor: pointer;
+}
+input[type="checkbox" i] {
+  background-color: initial;
+  cursor: default;
+  appearance: auto;
+  box-sizing: border-box;
+  margin: 3px 3px 3px 4px;
+  padding: initial;
+  border: initial;
+}
+input {
+  writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: fieldtext;
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  appearance: auto;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  background-color: field;
+  margin: 0em;
+  padding: 1px 2px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
+}
+.hsvmCs {
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+.fhtMkh {
+  line-height: 0;
+  display: block;
+  cursor: pointer;
+}
+.css-ob4lje {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex: 1 1 100%;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.css-1dyoea {
+  height: 35px;
+  width: 35px;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+  background-color: var(--ds-surface-overlay, #ffffff);
+  border-radius: 50%;
+  box-sizing: content-box;
+  cursor: inherit;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  outline: none;
+  overflow: hidden;
+  position: static;
+  transform: translateZ(0px);
+  transition:
+    transform 200ms ease 0s,
+    opacity 200ms ease 0s;
+  box-shadow: 0 0 0 2px var(--ds-surface-overlay, #ffffff);
+  border: none;
+  margin: 2px;
+  padding: 0px;
+  font-size: inherit;
+  font-family: inherit;
+}
+.class1 {
+  background-color: aqua;
+}
+.css-1dyoea:active {
+  // width: 35px;
+  // height: 35px;
+  border-radius: 0%;
+}
+.iNYZoJ {
+  position: relative;
+}
+.navH {
+  color: #fff;
+  font-weight: bolder;
+  font-size: 14px;
+
+  // padding-right: 20px;
+}
+.navh-rout {
+  text-align: right;
+}
+.active-span {
+  color: #37a825;
+  text-decoration: none;
+  border-bottom: 3px solid #c19e10;
+}
+.navH:target {
+  background-color: red;
+}
+.navH:focus-visible {
+  background-color: red;
+}
+#ghx-quick-filters > ul > .iNYZoJ {
+  padding: 0px;
+  margin: 0px 12px 0px 0px;
+}
+#ghx-quick-filters > .knMThH.knMThH {
+  display: flex;
+}
+#ghx-quick-filters > ul {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#ghx-quick-filters {
+  margin-bottom: 16px;
+}
+.name-label {
+  color: #707070;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 42%;
+  // margin-left: 5vw;
+}
+@import "../../../assets/style/direction";

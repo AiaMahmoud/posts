@@ -1,0 +1,290 @@
+@import "colors";
+@mixin biDirectional($start, $end) {
+  .btn {
+    background-color: $dark-blue;
+    padding: 0.5rem 2rem;
+    // border-radius: 14px;
+  }
+  .formTitle{
+    color: #c19e10;
+    font-size: 24px !important;
+    text-align: center;
+  }
+  .btnW{
+    background-color: #FFCC01;
+    color: #ffffff;
+    padding: 0.5rem 2rem;
+  }
+  .searchInput {border:0 !important;outline:0 !important;}
+  .searchInput:focus {outline:none!important;
+    box-shadow:none !important}
+    .searchInput::placeholder {
+      color: #b3b2b2;
+  }
+  .checkbox{
+    margin-right: 10px;
+  }
+  .timeIn{color: #000;}
+  .timeIn::ng-deep div.ngb-dp-arrow > button {
+    color: red;
+  }
+  .btn2{
+    background-color: $dark-blue;
+    padding: 0.5rem 2rem;
+  }
+  .partH{
+    color: $space-blue;
+  }
+  .customerName{
+    color: $space-blue;
+}
+  .w-50{
+    width: 50% !important;
+  }
+  .px-formly{
+      display: block;
+    width: 100%;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+  }
+  .denger-spam{
+    color: $danger;
+    display: block;
+    margin-top: -20px;
+  }
+  .form-control {
+    display: block;
+    width: 100%;
+    min-width: 100px;
+    font-size: 1rem !important;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $color;
+    background-color: $primary-bg !important;
+    background-clip: padding-box;
+    border: 1px solid $content-form !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    border-radius: 0.25rem !important;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    &[type="number"]::-webkit-outer-spin-button,
+    &[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+  .form-control:focus {
+    border: 0px !important;
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem $space-blue;
+  }
+.showPageSize{
+  border-radius: 50px !important;
+
+}
+  .btn-primary {
+    color: $primary-bg;
+    background-color: #df1a33;
+    border-color: $space-blue;
+    box-shadow:0 10px 10px -12px $space-blue;
+  }
+
+  .btn-danger {
+    color: #fd4949;
+    background-color: #fff;
+    border-color: #fd4949;
+    box-shadow:0 10px 10px -12px #fff;
+  }
+
+  .btn-danger:hover,
+  .btn-danger:active,
+  .btn-danger:focus {
+    color: #ffff;
+    background-color:  #fd4949;
+    border-color: #ffffff;
+  }
+
+
+  .btn-default {
+    background-color: #fff;
+    color:#737373;//$space-gray2;// #8c8c8c ;//$primary-bg;
+    box-shadow: 0 10px 10px -12px $space-gray2;
+  }
+  .image {
+    box-shadow: 0 10px 20px -10px $pop-color;
+  }
+.btn-defaultX{
+  background-color: #C19E10;
+  color: #ffff;
+}
+  .btn-primary:hover,
+  .btn-primary:active,
+  .btn-primary:focus {
+    color: $primary-bg;
+    background-color: $space-blue;
+    border-color: #ffffff;
+  }
+
+  .btn-primary:focus,
+  .form-control:focus .btn-default:focus,
+  .btn-default:active {
+    box-shadow: 0 0 0 0.25rem rgba(43, 120, 34, 0.5) !important;
+  }
+
+  .btn-warning:hover,
+  .btn-warning:active,
+  .btn-warning:focus {
+    color: $primary-bg;
+    padding: 0.5rem 2rem;
+    background-color: #ffffff;
+    border-color: #FFCC01;
+    color:#FFCC01;
+  }
+.btn-w2:hover,
+.btn-w2:active,
+.btn-w2:focus {
+  color: $primary-bg;
+  padding: 0.5rem 2rem;
+  background-color: #ffffff;
+  border-color: #FFCC01;
+  color:#FFCC01;
+}
+  .btn-warning:focus,
+  .form-control:focus .btn-default:focus,
+  .btn-default:active {
+    box-shadow: 0 0 0 0.25rem #FFCC01 !important;
+  }
+  // FFCC01
+  .form-select:focus,
+  .form-check-input:focus {
+    border-color: transparent;
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem $hover-blue;
+  }
+  .absolute {
+    position: absolute !important;
+  }
+  
+  .w-full {
+    align-items: center;
+    width: 75% !important;
+  }
+  .icon-x {
+    top: 30px !important;
+    display: flex !important;
+    justify-content: end !important;
+  }
+  .form-check-input:checked {
+    background-color: $space-blue;
+    border-color: $space-blue;
+  }
+
+  .form-check-input:hover,
+  .form-check-input:active,
+  .form-check-input:focus {
+    color: $space-blue;
+  }
+
+  .form-switch .form-check-input:checked {
+    background-size: auto !important;
+  }
+
+  .form-check .form-check-input {
+    float: none;
+    margin-left: 0em !important;
+  }
+
+  .modal-header {
+    border-bottom: 0px solid $header-form;
+  }
+
+  .form-group label {
+    margin-bottom: 4px;
+  }
+
+  .form-group,
+  .form-check {
+    margin-bottom: 5px;
+    padding: 0;
+  }
+
+  .form-floating > label {
+    left: auto;
+  }
+
+  .file {
+    margin-top: -8px;
+  }
+
+  .ng-select .ng-select-container {
+    color: $color;
+    background-color: $primary-bg;
+    border-radius: 4px;
+    border: 1px solid $lite-ccc;
+    min-height: 42px;
+  }
+
+  .ng-select {
+    box-shadow: $shadow;
+  }
+  .ng-select.ng-select-focused:not(.ng-select-opened) > .ng-select-container {
+    box-shadow: 0 0 0 0.1rem $hover-blue;
+    border-color: transparent;
+  }
+
+  .ng-select span {
+    color: $color;
+  }
+
+  .mat-dialog-container {
+    height: auto !important;
+    overflow-y: scroll !important;
+  }
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: #f2f2f2;
+  }
+  .cdk-overlay-pane {
+    background-color: #b3b2b2;
+    border-radius: 6px;
+    box-shadow: 10px 10px 10px 10px rgba(10, 10, 10, 0.1);
+    overflow: hidden;
+  }
+
+  .modal-content .form-check {
+    border-radius: 0.25rem;
+    height: calc(100% - 15px);
+  }
+  .form-floating > label {
+    top: -8px;
+  }
+
+  .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: $primary-bg;
+    background-clip: padding-box;
+    border: 0px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    outline: 0;
+  }
+
+  @media (max-width: 767px) {
+    .form-check {
+      margin-bottom: 17px;
+      padding: 15px 0px;
+    }
+  }
+
+  .mat-primary .mat-pseudo-checkbox-checked, .mat-primary .mat-pseudo-checkbox-indeterminate{
+
+    background-color: $active-blue !important;
+  }
+  [type='password']:focus{
+    border-color: transparent !important;
+  }
+
+}
+@import "../../assets/style/direction";
