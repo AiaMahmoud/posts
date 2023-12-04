@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
     if (this.FormLogin.valid) {
       this.auth.login(loginParam).subscribe((response: any) => {
         if (response) {
-            this.router.navigate(['/']);
+          this.router.navigate(['/']);
 
           this.alertify.success(this.translate.instant('AUTH.LoginSuccessfully'));
         } else {
@@ -48,6 +48,8 @@ export class LoginComponent implements OnInit {
         this.loading = false;
         this.alertify.error(this.translate.instant('AUTH.LoginFailed'));
       });
+    } else {
+      this.loading = false;
     }
   }
   loading: boolean = false;
